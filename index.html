@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10131c" />
+    <meta
+      name="description"
+      content="Blastbound — jump into a rocket-powered tank arena."
+    />
+    <title>Blastbound — Rocket Arena</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Blastbound home">
+          <span class="brand-mark">B</span>
+          BLASTBOUND
+        </a>
+        <span class="status"><span class="status-dot"></span> TRAINING ONLINE</span>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">ROCKET-POWERED MAYHEM</p>
+            <h1>LOCK ON.<br /><span>LAUNCH OFF.</span></h1>
+            <p class="intro">
+              Drive your tank, line up your shots, and take over the arena.
+              Your training starts here.
+            </p>
+            <button id="play-button" class="primary-button">
+              ENTER THE ARENA <span aria-hidden="true">↗</span>
+            </button>
+            <p class="microcopy">FREE TRAINING · NO ACCOUNT NEEDED</p>
+          </div>
+
+          <div class="hero-art" aria-label="Illustration of a rocket tank">
+            <div class="sun-glow"></div>
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="floating-rock rock-one"></div>
+            <div class="floating-rock rock-two"></div>
+            <div class="tank">
+              <div class="tank-barrel"></div>
+              <div class="tank-turret"></div>
+              <div class="tank-body"></div>
+              <div class="tank-track"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="art-label">UNIT 001 <span>READY</span></div>
+          </div>
+        </section>
+
+        <section id="arena-section" class="arena-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PRACTICE MODE</p>
+              <h2>THE TRAINING ARENA</h2>
+            </div>
+            <span class="mode-pill">SINGLE PLAYER</span>
+          </div>
+
+          <div class="game-frame">
+            <div class="game-toolbar">
+              <span><span class="status-dot"></span> LIVE SIMULATION</span>
+              <span id="health-display">ARMOR: 100</span>
+              <span id="score-display">SCORE: 0</span>
+            </div>
+            <canvas
+              id="game-canvas"
+              width="960"
+              height="540"
+              aria-label="Tank training game. Use WASD or arrow keys to move, mouse to aim, and click or space to fire."
+              tabindex="0"
+            ></canvas>
+            <div class="game-controls">
+              <span><b>WASD / ↑↓←→</b> MOVE</span>
+              <span><b>MOUSE</b> AIM</span>
+              <span><b>CLICK / SPACE</b> FIRE</span>
+              <button id="reset-button" class="secondary-button">RESTART</button>
+            </div>
+          </div>
+          <p class="game-note">
+            This is an original offline practice prototype. Online multiplayer,
+            matchmaking, and accounts are not included yet.
+          </p>
+        </section>
+
+        <section class="feature-row">
+          <article class="feature">
+            <span class="feature-number">01</span>
+            <h3>DRIVE</h3>
+            <p>Move around the arena and get comfortable with your controls.</p>
+          </article>
+          <article class="feature">
+            <span class="feature-number">02</span>
+            <h3>AIM</h3>
+            <p>Track your targets with mouse-controlled turret aiming.</p>
+          </article>
+          <article class="feature">
+            <span class="feature-number">03</span>
+            <h3>FIRE</h3>
+            <p>Launch rockets and practice hitting the training bots.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <a class="brand footer-brand" href="#"><span class="brand-mark">B</span> BLASTBOUND</a>
+        <span>AN ORIGINAL GAME PROTOTYPE</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
